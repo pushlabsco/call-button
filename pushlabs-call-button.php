@@ -28,9 +28,6 @@ if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2/init.php' ) 
 if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/classes/options_page.php' ) ) {
   require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/classes/options_page.php' );
 }
-if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-conditionals/cmb2-conditionals.php' ) ) {
-  require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-conditionals/cmb2-conditionals.php' );
-}
 if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-radio-image/cmb2-radio-image.php' ) ) {
   require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-radio-image/cmb2-radio-image.php' );
 }
@@ -165,7 +162,9 @@ function pushlabs_callbutton_button() {
     $position = '';
   }
 
+  // Filter to change the icon class
   $icon_class = 'fa-phone';
+  $icon_class = apply_filters( 'pushlabs_callbutton_icon_class', $icon_class );
 
   // If no phone number is provided, don't show the button
   if ( empty( $phone_meta ) ) {
@@ -203,3 +202,26 @@ function pushlabs_callbutton_button() {
   echo $output;
 }
 add_action( 'wp_footer', 'pushlabs_callbutton_button' );
+
+/**
+ * Create our custom Phone field for CMB2
+ *
+ * @since 0.1
+ */
+function cmb2_render_callback_for_pushlabs_callbutton_phone( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+  // Choose our input type
+  echo $field_type_object->input( array( 'type' => 'number' ) );
+}
+add_action( 'cmb2_render_pushlabs_callbutton_phone', 'cmb2_render_callback_for_pushlabs_callbutton_phone', 10, 5 );
+
+/**
+ * Sanitize our custom phone field for CMB2
+ *
+ * @since 0.1
+ */
+function cmb2_sanitize_pushlabs_callbutton_phone_callback( $null, $new ) {
+  // Sanitize the input
+  $new = preg_replace( "/[^0-9]/", "", $new );
+  return $new;
+}
+add_filter( 'cmb2_sanitize_pushlabs_callbutton_phone', 'cmb2_sanitize_pushlabs_callbutton_phone_callback', 10, 2 );

@@ -120,7 +120,7 @@ class Pushlabs_Callbutton_Options {
       'name' => __( 'Phone Number', 'call-button' ),
       'desc' => __( 'Please enter your phone number including area code.', 'call-button' ),
       'id'   => $prefix . 'phone',
-      'type' => 'text',
+      'type' => 'pushlabs_callbutton_phone',
     ) );
 
     $cmb->add_field( array(
