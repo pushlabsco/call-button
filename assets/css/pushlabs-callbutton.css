@@ -1,0 +1,56 @@
+.pushlabs-callbutton {
+  position: fixed;
+  display: block;
+  z-index: 9999;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--button {
+  color: #fff;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-background {
+  color: #03A9F4;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-icon-pos {
+  margin-top: 2px;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-background-white {
+  color: #fff;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-shadow {
+  text-shadow: 0px 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--banner {
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: #03A9F4;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-style--banner i {
+  margin-right: 7px;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-position--right {
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-position--left {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-position--middle {
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

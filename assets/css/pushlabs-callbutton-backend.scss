@@ -1,0 +1,49 @@
+.pushlabs-callbutton-tab {
+  background-color: #fff;
+  border: 1px solid rgba(153,169,179,.13);
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.03);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+#pushlabs_callbutton_metabox {
+  .cmb-type-radio-image .cmb2-radio-list li label img {
+    width: 200px;
+  }
+
+  .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label {
+    border: 0;
+    position: relative;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: 0.2s ease-in-out opacity, 0.2s ease-in-out filter;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 70%;
+      left: 0;
+      background: linear-gradient(#f1f1f1, transparent);
+    }
+  }
+
+  .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:hover,
+  .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
+.pushlabs-callbutton-style-box {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 29px 0 rgba(0,0,0,.11);
+  margin: 25px 0;
+  border-radius: 5px;
+
+  h2 {
+    margin: 0;
+  }
+}
