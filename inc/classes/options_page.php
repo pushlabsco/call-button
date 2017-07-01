@@ -141,7 +141,7 @@ class Pushlabs_Callbutton_Options {
       ),
       'images_path'      => PUSHLABS_CALLBUTTON_PLUGIN_URL,
       'images'           => array(
-        'button'    => 'assets/img/radio-button-right.png',
+        'button'    => 'assets/img/radio-blank.png',
         'banner'  => 'assets/img/radio-banner.png',
       ),
     ) );

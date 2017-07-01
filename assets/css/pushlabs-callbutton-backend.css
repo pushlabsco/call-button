@@ -5,16 +5,22 @@
   padding: 20px;
   margin-bottom: 25px; }
 
-#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list li label img {
+.pushlabs-callbutton-box-options {
+  display: none; }
+
+#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list li label img,
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list li label img {
   width: 200px; }
 
-#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label {
+#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label,
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label {
   border: 0;
   position: relative;
   opacity: 0.5;
   filter: grayscale(100%);
   transition: 0.2s ease-in-out opacity, 0.2s ease-in-out filter; }
-  #pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:after {
+  #pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:after,
+  #pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:after {
     content: "";
     position: absolute;
     top: 0;
@@ -24,9 +30,14 @@
     background: linear-gradient(#f1f1f1, transparent); }
 
 #pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:hover,
-#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label {
+#pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label,
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:hover,
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label {
   opacity: 1;
   filter: grayscale(0); }
+
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:after {
+  background: linear-gradient(#fff, transparent); }
 
 .pushlabs-callbutton-style-box {
   background-color: #fff;

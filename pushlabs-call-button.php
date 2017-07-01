@@ -28,6 +28,9 @@ if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2/init.php' ) 
 if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/classes/options_page.php' ) ) {
   require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/classes/options_page.php' );
 }
+if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/register_metabox.php' ) ) {
+  require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/register_metabox.php' );
+}
 if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-radio-image/cmb2-radio-image.php' ) ) {
   require_once( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-radio-image/cmb2-radio-image.php' );
 }
@@ -141,6 +144,20 @@ function pushlabs_callbutton_inline_css() {
 
 }
 add_action( 'wp_enqueue_scripts', 'pushlabs_callbutton_inline_css' );
+
+/**
+ * The post types that our metabox will be shown on.
+ *
+ * @since 0.1
+ * @uses apply_filters()
+ * @return array Array of post types Call Button uses
+ */
+function pushlabs_callbutton_post_types() {
+  $post_types = array( 'post', 'page' );
+  $post_types = apply_filters( 'pushlabs_callbutton_post_types', $post_types );
+
+  return $post_types;
+}
 
 /**
  * Build the call button

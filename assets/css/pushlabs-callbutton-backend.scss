@@ -6,7 +6,12 @@
   margin-bottom: 25px;
 }
 
-#pushlabs_callbutton_metabox {
+.pushlabs-callbutton-box-options {
+  display: none;
+}
+
+#pushlabs_callbutton_metabox,
+#pushlabs-callbutton-metabox {
   .cmb-type-radio-image .cmb2-radio-list li label img {
     width: 200px;
   }
@@ -33,6 +38,12 @@
   .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label {
     opacity: 1;
     filter: grayscale(0);
+  }
+}
+
+#pushlabs-callbutton-metabox .cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label {
+  &:after {
+    background: linear-gradient(#fff, transparent);
   }
 }
 
