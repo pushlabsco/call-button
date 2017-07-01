@@ -55,7 +55,7 @@ class Pushlabs_Callbutton_Options {
    */
   protected function __construct() {
     // Set our title
-    $this->title = __( 'Call Button', 'call-button' );
+    $this->title = __( 'Call Button', 'pushlabs-callbutton' );
   }
   /**
    * Initiate our hooks
@@ -91,8 +91,8 @@ class Pushlabs_Callbutton_Options {
     <div class="wrap cmb2-options-page <?php echo $this->key; ?>">
       <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
       <h2 class="nav-tab-wrapper wp-clearfix">
-        <a href="#settings" class="nav-tab nav-tab-active"><?php _e( 'Settings', 'call-button' ); ?></a>
-        <a href="#styles" class="nav-tab"><?php _e( 'Styles', 'call-button' ); ?></a>
+        <a href="#settings" class="nav-tab nav-tab-active"><?php _e( 'Settings', 'pushlabs-callbutton' ); ?></a>
+        <a href="#styles" class="nav-tab"><?php _e( 'Styles', 'pushlabs-callbutton' ); ?></a>
       </h2>
       <?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
     </div>
@@ -120,37 +120,37 @@ class Pushlabs_Callbutton_Options {
 
     // Set our CMB2 fields
     $cmb->add_field( array(
-      'name' => __( 'Phone Number', 'call-button' ),
-      'desc' => __( 'Please enter your phone number including area code.', 'call-button' ),
+      'name' => __( 'Phone Number', 'pushlabs-callbutton' ),
+      'desc' => __( 'Please enter your phone number including area code.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'phone',
       'type' => 'pushlabs_callbutton_number',
       'before_row' => '<div class="wrap pushlabs-callbutton-pane1">',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Mobile Breakpoint', 'call-button' ),
-      'desc' => __( 'If you would like to customize the breakpoint for which the button/banner appear, you can specify a pixel here. (Defualt: 768px)', 'call-button' ),
+      'name' => __( 'Mobile Breakpoint', 'pushlabs-callbutton' ),
+      'desc' => __( 'If you would like to customize the breakpoint for which the button/banner appear, you can specify a pixel here. (Defualt: 768px)', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'breakpoint',
       'type' => 'pushlabs_callbutton_number',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Hide the Metabox on Posts and Pages?', 'call-button' ),
-      'desc' => __( 'If you don\'t need the metabox for Call Button, you can hide it here.', 'call-button' ),
+      'name' => __( 'Hide the Metabox on Posts and Pages?', 'pushlabs-callbutton' ),
+      'desc' => __( 'If you don\'t need the metabox for Call Button, you can hide it here.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'hide_metabox',
       'type' => 'checkbox',
       'after_row' => '</div>',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Style', 'call-button' ),
-      'desc' => __( 'Please select your style.', 'call-button' ),
+      'name' => __( 'Style', 'pushlabs-callbutton' ),
+      'desc' => __( 'Please select your style.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style',
       'type' => 'radio_image',
       'default' => 'button',
       'options' => array(
-        'button' => __( 'Button', 'call-button'),
-        'banner' => __( 'Banner', 'call-button'),
+        'button' => __( 'Button', 'pushlabs-callbutton'),
+        'banner' => __( 'Banner', 'pushlabs-callbutton'),
       ),
       'images_path' => PUSHLABS_CALLBUTTON_PLUGIN_URL,
       'images' => array(
@@ -161,100 +161,100 @@ class Pushlabs_Callbutton_Options {
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Button Position', 'call-button' ),
-      'desc' => __( 'The position your button will be in.', 'call-button' ),
+      'name' => __( 'Button Position', 'pushlabs-callbutton' ),
+      'desc' => __( 'The position your button will be in.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_position',
       'type' => 'radio_inline',
       'options'          => array(
-        'left' => __( 'Left', 'call-button' ),
-        'middle'   => __( 'Middle', 'call-button' ),
-        'right'     => __( 'Right', 'call-button' ),
+        'left' => __( 'Left', 'pushlabs-callbutton' ),
+        'middle'   => __( 'Middle', 'pushlabs-callbutton' ),
+        'right'     => __( 'Right', 'pushlabs-callbutton' ),
       ),
       'default' => 'right',
-      'before_row' => '<div class="pushlabs-callbutton-style-box box-style--button"><h2>' . __( 'Button Style', 'call-button' ) . '</h2><div class="pushlabs-callbutton-box-options">',
+      'before_row' => '<div class="pushlabs-callbutton-style-box box-style--button"><h2>' . __( 'Button Style', 'pushlabs-callbutton' ) . '</h2><div class="pushlabs-callbutton-box-options">',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Button Size', 'call-button' ),
-      'desc' => __( 'The size of your button.', 'call-button' ),
+      'name' => __( 'Button Size', 'pushlabs-callbutton' ),
+      'desc' => __( 'The size of your button.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_size',
       'type' => 'radio_inline',
       'options'          => array(
-        'small' => __( 'Small', 'call-button' ),
-        'medium'   => __( 'Medium', 'call-button' ),
-        'large'     => __( 'Large', 'call-button' ),
+        'small' => __( 'Small', 'pushlabs-callbutton' ),
+        'medium'   => __( 'Medium', 'pushlabs-callbutton' ),
+        'large'     => __( 'Large', 'pushlabs-callbutton' ),
       ),
       'default' => 'medium',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Background Color', 'call-button' ),
-      'desc' => __( 'Background color for the call button.', 'call-button' ),
+      'name' => __( 'Background Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'Background color for the call button.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_bg_color',
       'type' => 'colorpicker',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Icon Color', 'call-button' ),
-      'desc' => __( 'Icon color for the call button.', 'call-button' ),
+      'name' => __( 'Icon Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'Icon color for the call button.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_color',
       'type' => 'colorpicker',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Disable Shadow?', 'call-button' ),
-      'desc' => __( 'Toggle to enable/disable the drop shadow of the button.', 'call-button' ),
+      'name' => __( 'Disable Shadow?', 'pushlabs-callbutton' ),
+      'desc' => __( 'Toggle to enable/disable the drop shadow of the button.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_shadow',
       'type' => 'checkbox',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Disable Border?', 'call-button' ),
-      'desc' => __( 'Toggle to enable/disable the border of the button.', 'call-button' ),
+      'name' => __( 'Disable Border?', 'pushlabs-callbutton' ),
+      'desc' => __( 'Toggle to enable/disable the border of the button.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_border',
       'type' => 'checkbox',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Border Color', 'call-button' ),
-      'desc' => __( 'Border color for the call button if enabled.', 'call-button' ),
+      'name' => __( 'Border Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'Border color for the call button if enabled.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_button_border_color',
       'type' => 'colorpicker',
       'after_row' => '</div></div>',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Background Color', 'call-button' ),
-      'desc' => __( 'Background color for the call banner.', 'call-button' ),
+      'name' => __( 'Background Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'Background color for the call banner.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_banner_bg_color',
       'type' => 'colorpicker',
-      'before_row' => '<div class="pushlabs-callbutton-style-box box-style--banner"><h2>' . __( 'Banner Style', 'call-button' ) . '</h2><div class="pushlabs-callbutton-box-options">',
+      'before_row' => '<div class="pushlabs-callbutton-style-box box-style--banner"><h2>' . __( 'Banner Style', 'pushlabs-callbutton' ) . '</h2><div class="pushlabs-callbutton-box-options">',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Border Top Color', 'call-button' ),
-      'desc' => __( 'Add a border to the top of the banner.', 'call-button' ),
+      'name' => __( 'Border Top Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'Add a border to the top of the banner.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_banner_border',
       'type' => 'colorpicker',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Banner Text', 'call-button' ),
-      'desc' => __( 'If you would like to include text after your icon, you can do that here.', 'call-button' ),
+      'name' => __( 'Banner Text', 'pushlabs-callbutton' ),
+      'desc' => __( 'If you would like to include text after your icon, you can do that here.', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_banner_text',
       'type' => 'text',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Banner Font Size', 'call-button' ),
-      'desc' => __( 'Font size for the text. (In px)', 'call-button' ),
+      'name' => __( 'Banner Font Size', 'pushlabs-callbutton' ),
+      'desc' => __( 'Font size for the text. (In px)', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_banner_font_size',
       'type' => 'pushlabs_callbutton_number',
     ) );
 
     $cmb->add_field( array(
-      'name' => __( 'Text Color', 'call-button' ),
-      'desc' => __( 'This includes the icon and text color if applicable', 'call-button' ),
+      'name' => __( 'Text Color', 'pushlabs-callbutton' ),
+      'desc' => __( 'This includes the icon and text color if applicable', 'pushlabs-callbutton' ),
       'id'   => $prefix . 'style_banner_color',
       'type' => 'colorpicker',
       'after_row' => '</div></div></div>',
@@ -274,7 +274,7 @@ class Pushlabs_Callbutton_Options {
     if ( $object_id !== $this->key || empty( $updated ) ) {
       return;
     }
-    add_settings_error( $this->key . '-notices', '', __( 'Settings updated.', 'call-button' ), 'updated' );
+    add_settings_error( $this->key . '-notices', '', __( 'Settings updated.', 'pushlabs-callbutton' ), 'updated' );
     settings_errors( $this->key . '-notices' );
   }
   /**

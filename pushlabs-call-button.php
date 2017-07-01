@@ -6,7 +6,7 @@ Description: A call button placed on your website to instantly increase conversi
 Version: 1.0
 Author: Push Labs
 Author URI: https://pushlabs.co
-Text Domain: call-button
+Text Domain: pushlabs-callbutton
 Domain Path: /languages
 */
 
@@ -48,7 +48,7 @@ function pushlabs_callbutton_load_textdomain() {
    * Using basename( dirname( __FILE__ ) ) instead of PUSHLABS_CALLBUTTON_PLUGIN_BASE
    * due to open_basedir() issues.
    */
-  load_plugin_textdomain( 'call-button', false, basename( dirname( __FILE__ ) ) . '/languages' );
+  load_plugin_textdomain( 'pushlabs-callbutton', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'pushlabs_callbutton_load_textdomain' );
 
