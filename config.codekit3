@@ -154,6 +154,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/gpl.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/gpl.txt",
+		"oF": 0
+		},
 	"\/inc\/classes\/index.php": {
 		"ft": 8192,
 		"oA": 2,
