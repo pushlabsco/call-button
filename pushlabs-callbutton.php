@@ -150,6 +150,22 @@ function pushlabs_callbutton_inline_css() {
 add_action( 'wp_enqueue_scripts', 'pushlabs_callbutton_inline_css' );
 
 /**
+ * Add settings link to the plugin's page
+ *
+ * @since 1.0
+ * @param @links string settings link
+ * @return string link on the plugin's page.
+ *
+ * @uses __()
+ */
+function pushlabs_callbutton_settings_link( $links ) {
+  $settings_link = __( '<a href="options-general.php?page=pushlabs_callbutton">Settings</a>', 'call-button' );
+  array_unshift($links, $settings_link);
+  return $links;
+}
+add_filter('plugin_action_links_' . PUSHLABS_CALLBUTTON_PLUGIN_BASE, 'pushlabs_callbutton_settings_link' );
+
+/**
  * The post types that our metabox will be shown on.
  *
  * @since 1.0
