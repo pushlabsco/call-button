@@ -3,10 +3,6 @@
   display: block;
   z-index: 9999;
 
-  @media (min-width: 768px) {
-    display: none !important;
-  }
-
   &.pushlabs-callbutton-style--button {
     color: #fff;
 

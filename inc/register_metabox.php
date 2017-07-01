@@ -25,7 +25,7 @@ function pushlabs_callbutton_register_metabox() {
 
   $callbutton_metabox->add_field( array(
     'name' => __( 'Disable Call Button on this page?', 'call-button' ),
-    'desc' => __( 'If you would like disable Call Button on this page or post, you can do so here.', 'call-button' ),
+    'desc' => __( 'If you would like to disable Call Button on this page or post, you can do so here.', 'call-button' ),
     'id'   => $prefix . 'disable',
     'type' => 'checkbox',
   ) );

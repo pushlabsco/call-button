@@ -4,12 +4,6 @@
   z-index: 9999;
 }
 
-@media (min-width: 768px) {
-  .pushlabs-callbutton {
-    display: none !important;
-  }
-}
-
 .pushlabs-callbutton.pushlabs-callbutton-style--button {
   color: #fff;
 }

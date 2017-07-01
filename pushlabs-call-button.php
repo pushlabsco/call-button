@@ -109,8 +109,12 @@ function pushlabs_callbutton_inline_css() {
   $css = '';
 
   if ( !empty( $mobile_breakpoint ) ) {
-    $css .= '@media (min-width: ' . $mobile_breakpoint . 'px) { .pushlabs-callbutton { display: none !important; } }';
+    $mobile_breakpoint = $mobile_breakpoint;
+  } else {
+    $mobile_breakpoint = '768';
   }
+
+  $css .= '@media (min-width: ' . $mobile_breakpoint . 'px) { .pushlabs-callbutton { display: none !important; } }';
 
   if ( !empty( $style_button_bg_color ) ) {
     $css .= '.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-background {color: ' . $style_button_bg_color . '}';
@@ -165,28 +169,59 @@ function pushlabs_callbutton_post_types() {
  * @since 0.1
  */
 function pushlabs_callbutton_button() {
-  // Our Data
-  $style_prefix = 'pushlabs_callbutton_style_';
-  $phone_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_phone' );
-  $style_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style' );
-  $button_position_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_position' );
-  $button_size_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_size' );
-  $banner_text_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_banner_text' );
-
   // Establish some variables
+  $style_prefix = 'pushlabs_callbutton_style_';
   $class = 'pushlabs-callbutton-';
+  $metabox_prefix = 'pushlabs_callbutton_metabox_field_';
 
+  // Identify if we are on a page or the home page and grab the ID conditionally
+  if( is_page() || is_single() ) {
+    $the_id = get_the_ID();
+  } elseif( is_home() && get_option( 'show_on_front' ) == 'page' ) {
+    $the_id = get_option( 'page_for_posts' );
+  }
 
-  $style = $class . 'style--' . $style_meta;
+  // Our metabox data
+  $phone_metabox = get_post_meta( $the_id, $metabox_prefix . 'phone', true );
+  $disable_metabox = get_post_meta( $the_id, $metabox_prefix . 'disable', true );
+  $style_metabox = get_post_meta( $the_id, $metabox_prefix . 'style', true );
 
-  if ( $style_meta === 'button' ) {
-    $position = $class . 'position--' . $button_position_meta;
+  // Our settings data
+  $phone_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_phone' );
+  $style_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style' );
+  $button_position_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_position' );
+  $button_size_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_size' );
+  $banner_text_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_banner_text' );
+
+  // Declare our data
+  $phone_obj = ( !empty( $phone_metabox ) ? $phone_metabox : $phone_option );
+  $style_obj = ( !empty( $style_metabox ) ? $style_metabox : $style_option );
+  $button_position_obj = $button_position_option;
+  $button_size_obj = $button_size_option;
+  $banner_text_obj = $banner_text_option;
+
+  // If no phone number is provided, quit
+  if ( empty( $phone_option ) ) {
+    return;
+  }
+
+  if ( !empty( $disable_metabox ) ) {
+    return;
+  }
+
+  // Essemble the style class
+  $style = $class . 'style--' . $style_obj;
+
+  // Essemble the position class
+  if ( $style_obj === 'button' ) {
+    $position = $class . 'position--' . $button_position_obj;
   } else {
     $position = '';
   }
 
-  if ( $style_meta === 'button' ) {
-    $size = $class . 'size--' . $button_size_meta;
+  // Essemble the size class
+  if ( $style_obj === 'button' ) {
+    $size = $class . 'size--' . $button_size_obj;
   } else {
     $size = '';
   }
@@ -195,14 +230,9 @@ function pushlabs_callbutton_button() {
   $icon_class = 'fa-phone';
   $icon_class = apply_filters( 'pushlabs_callbutton_icon_class', $icon_class );
 
-  // If no phone number is provided, don't show the button
-  if ( empty( $phone_meta ) ) {
-    return;
-  }
-
   // Create the icon
   $icon = '';
-  if ( $style_meta === 'button' ) {
+  if ( $style_obj === 'button' ) {
     $icon = '<span class="fa-stack fa-2x">';
     $icon .= '<i class="fa fa-circle fa-stack-2x ' . $class . 'shadow"></i>';
     $icon .= '<i class="fa fa-circle fa-stack-2x ' . $class . 'background"></i>';
@@ -213,13 +243,14 @@ function pushlabs_callbutton_button() {
     $icon .= '<i class="fa ' . $icon_class . ' ' . $class . 'icon-pos"></i>';
   }
 
+  // Add text if applicable
   $text = '';
-  if ( $style_meta === 'banner' ) {
-    $text .= $banner_text_meta;
+  if ( $style_obj === 'banner' ) {
+    $text .= $banner_text_obj;
   }
 
   // Create the button
-  $button = '<a href="tel:' . $phone_meta . '" class="pushlabs-callbutton ' . $style . ' ' . $size . ' ' . $position . '">';
+  $button = '<a href="tel:' . $phone_obj . '" class="pushlabs-callbutton ' . $style . ' ' . $size . ' ' . $position . '">';
   $button .= '<span class="pushlabs-callbutton-container">';
   $button .= $icon;
   $button .= $text;
