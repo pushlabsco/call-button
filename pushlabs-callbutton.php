@@ -2,7 +2,7 @@
 /*
 Plugin Name: Call Button
 Plugin URI: https://pushlabs.co/
-Description: A call button placed on your website to instantly increase conversions!
+Description: A call button placed on your website to instantly increase customer interaction!
 Version: 1.0
 Author: Push Labs
 Author URI: https://pushlabs.co
