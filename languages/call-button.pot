@@ -1,0 +1,941 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Call Button\n"
+"POT-Creation-Date: 2017-06-30 19:18-0700\n"
+"PO-Revision-Date: 2017-06-30 19:18-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: pushlabs-call-button.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: inc/classes/options_page.php:58 inc/register_metabox.php:20
+msgid "Call Button"
+msgstr ""
+
+#: inc/classes/options_page.php:94
+msgid "Settings"
+msgstr ""
+
+#: inc/classes/options_page.php:95
+msgid "Styles"
+msgstr ""
+
+#: inc/classes/options_page.php:123 inc/register_metabox.php:35
+msgid "Phone Number"
+msgstr ""
+
+#: inc/classes/options_page.php:124
+msgid "Please enter your phone number including area code."
+msgstr ""
+
+#: inc/classes/options_page.php:131
+msgid "Mobile Breakpoint"
+msgstr ""
+
+#: inc/classes/options_page.php:132
+msgid ""
+"If you would like to customize the breakpoint for which the button/banner "
+"appear, you can specify a pixel here. (Defualt: 768px)"
+msgstr ""
+
+#: inc/classes/options_page.php:138
+msgid "Hide the Metabox on Posts and Pages?"
+msgstr ""
+
+#: inc/classes/options_page.php:139
+msgid "If you don't need the metabox for Call Button, you can hide it here."
+msgstr ""
+
+#: inc/classes/options_page.php:146 inc/register_metabox.php:42
+msgid "Style"
+msgstr ""
+
+#: inc/classes/options_page.php:147
+msgid "Please select your style."
+msgstr ""
+
+#: inc/classes/options_page.php:152 inc/register_metabox.php:49
+msgid "Button"
+msgstr ""
+
+#: inc/classes/options_page.php:153 inc/register_metabox.php:50
+msgid "Banner"
+msgstr ""
+
+#: inc/classes/options_page.php:164
+msgid "Button Position"
+msgstr ""
+
+#: inc/classes/options_page.php:165
+msgid "The position your button will be in."
+msgstr ""
+
+#: inc/classes/options_page.php:169
+msgid "Left"
+msgstr ""
+
+#: inc/classes/options_page.php:170
+msgid "Middle"
+msgstr ""
+
+#: inc/classes/options_page.php:171
+msgid "Right"
+msgstr ""
+
+#: inc/classes/options_page.php:174
+msgid "Button Style"
+msgstr ""
+
+#: inc/classes/options_page.php:178
+msgid "Button Size"
+msgstr ""
+
+#: inc/classes/options_page.php:179
+msgid "The size of your button."
+msgstr ""
+
+#: inc/classes/options_page.php:183
+msgid "Small"
+msgstr ""
+
+#: inc/classes/options_page.php:184
+msgid "Medium"
+msgstr ""
+
+#: inc/classes/options_page.php:185
+msgid "Large"
+msgstr ""
+
+#: inc/classes/options_page.php:191 inc/classes/options_page.php:227
+msgid "Background Color"
+msgstr ""
+
+#: inc/classes/options_page.php:192
+msgid "Background color for the call button."
+msgstr ""
+
+#: inc/classes/options_page.php:198
+msgid "Icon Color"
+msgstr ""
+
+#: inc/classes/options_page.php:199
+msgid "Icon color for the call button."
+msgstr ""
+
+#: inc/classes/options_page.php:205
+msgid "Disable Shadow?"
+msgstr ""
+
+#: inc/classes/options_page.php:206
+msgid "Toggle to enable/disable the drop shadow of the button."
+msgstr ""
+
+#: inc/classes/options_page.php:212
+msgid "Disable Border?"
+msgstr ""
+
+#: inc/classes/options_page.php:213
+msgid "Toggle to enable/disable the border of the button."
+msgstr ""
+
+#: inc/classes/options_page.php:219
+msgid "Border Color"
+msgstr ""
+
+#: inc/classes/options_page.php:220
+msgid "Border color for the call button if enabled."
+msgstr ""
+
+#: inc/classes/options_page.php:228
+msgid "Background color for the call banner."
+msgstr ""
+
+#: inc/classes/options_page.php:231
+msgid "Banner Style"
+msgstr ""
+
+#: inc/classes/options_page.php:235
+msgid "Border Top Color"
+msgstr ""
+
+#: inc/classes/options_page.php:236
+msgid "Add a border to the top of the banner."
+msgstr ""
+
+#: inc/classes/options_page.php:242
+msgid "Banner Text"
+msgstr ""
+
+#: inc/classes/options_page.php:243
+msgid ""
+"If you would like to include text after your icon, you can do that here."
+msgstr ""
+
+#: inc/classes/options_page.php:249
+msgid "Banner Font Size"
+msgstr ""
+
+#: inc/classes/options_page.php:250
+msgid "Font size for the text. (In px)"
+msgstr ""
+
+#: inc/classes/options_page.php:256
+msgid "Text Color"
+msgstr ""
+
+#: inc/classes/options_page.php:257
+msgid "This includes the icon and text color if applicable"
+msgstr ""
+
+#: inc/classes/options_page.php:277
+msgid "Settings updated."
+msgstr ""
+
+#: inc/register_metabox.php:28
+msgid "Disable Call Button on this page?"
+msgstr ""
+
+#: inc/register_metabox.php:29
+msgid ""
+"If you would like to disable Call Button on this page or post, you can do so "
+"here."
+msgstr ""
+
+#: inc/register_metabox.php:36
+msgid ""
+"If you would like to use a different phone number for Call Button on this "
+"page, you can specify it here."
+msgstr ""
+
+#: inc/register_metabox.php:43
+msgid ""
+"If you would like to use a different style of Call Button for this page, you "
+"can specify it here."
+msgstr ""
+
+#: inc/register_metabox.php:48 inc/vendor/cmb2/includes/CMB2_JS.php:100
+msgid "Default"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:117
+msgid "Test Metabox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:130
+#: inc/vendor/cmb2/example-functions.php:452
+msgid "Test Text"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:131
+#: inc/vendor/cmb2/example-functions.php:144
+#: inc/vendor/cmb2/example-functions.php:157
+#: inc/vendor/cmb2/example-functions.php:164
+#: inc/vendor/cmb2/example-functions.php:177
+#: inc/vendor/cmb2/example-functions.php:185
+#: inc/vendor/cmb2/example-functions.php:194
+#: inc/vendor/cmb2/example-functions.php:202
+#: inc/vendor/cmb2/example-functions.php:217
+#: inc/vendor/cmb2/example-functions.php:225
+#: inc/vendor/cmb2/example-functions.php:233
+#: inc/vendor/cmb2/example-functions.php:250
+#: inc/vendor/cmb2/example-functions.php:259
+#: inc/vendor/cmb2/example-functions.php:272
+#: inc/vendor/cmb2/example-functions.php:279
+#: inc/vendor/cmb2/example-functions.php:286
+#: inc/vendor/cmb2/example-functions.php:300
+#: inc/vendor/cmb2/example-functions.php:313
+#: inc/vendor/cmb2/example-functions.php:326
+#: inc/vendor/cmb2/example-functions.php:338
+#: inc/vendor/cmb2/example-functions.php:347
+#: inc/vendor/cmb2/example-functions.php:355
+#: inc/vendor/cmb2/example-functions.php:364
+#: inc/vendor/cmb2/example-functions.php:371
+#: inc/vendor/cmb2/example-functions.php:385
+#: inc/vendor/cmb2/example-functions.php:453
+#: inc/vendor/cmb2/example-functions.php:544
+#: inc/vendor/cmb2/example-functions.php:552
+#: inc/vendor/cmb2/example-functions.php:559
+#: inc/vendor/cmb2/example-functions.php:566
+#: inc/vendor/cmb2/example-functions.php:573
+#: inc/vendor/cmb2/example-functions.php:580
+#: inc/vendor/cmb2/example-functions.php:587
+#: inc/vendor/cmb2/example-functions.php:614
+#: inc/vendor/cmb2/example-functions.php:622
+#: inc/vendor/cmb2/example-functions.php:629
+#: inc/vendor/cmb2/example-functions.php:666
+msgid "field description (optional)"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:143
+msgid "Test Text Small"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:156
+msgid "Test Text Medium"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:163
+msgid "Read-only Disabled Field"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:167
+msgid "Hey there, I'm a read-only field"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:176
+msgid "Custom Rendered Field"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:184
+msgid "Website URL"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:193
+msgid "Test Text Email"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:201
+msgid "Test Time"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:209
+#: inc/vendor/cmb2/example-functions.php:210
+msgid "Time zone"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:216
+msgid "Test Date Picker"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:224
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:232
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:249
+msgid "Test Money"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:258
+msgid "Test Color Picker"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:271
+msgid "Test Text Area"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:278
+msgid "Test Text Area Small"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:285
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:292
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:293
+msgid "This is a title description"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:299
+msgid "Test Select"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:305
+#: inc/vendor/cmb2/example-functions.php:318
+#: inc/vendor/cmb2/example-functions.php:330
+msgid "Option One"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:306
+#: inc/vendor/cmb2/example-functions.php:319
+#: inc/vendor/cmb2/example-functions.php:331
+msgid "Option Two"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:307
+#: inc/vendor/cmb2/example-functions.php:320
+#: inc/vendor/cmb2/example-functions.php:332
+msgid "Option Three"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:312
+msgid "Test Radio inline"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:325
+msgid "Test Radio"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:337
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:346
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:354
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:363
+msgid "Test Checkbox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:370
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:376
+msgid "Check One"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:377
+msgid "Check Two"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:378
+msgid "Check Three"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:384
+msgid "Test wysiwyg"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:392
+msgid "Test Image"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:393
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:399
+msgid "Multiple Files"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:400
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:407
+msgid "oEmbed"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:410
+#, php-format
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at %s."
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:443
+msgid "About Page Metabox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:472
+msgid "Repeating Field Group"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:480
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:482
+msgid "Entry {#}"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:483
+msgid "Add Another Entry"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:484
+msgid "Remove Entry"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:497
+msgid "Entry Title"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:504
+msgid "Description"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:505
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:511
+msgid "Entry Image"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:517
+msgid "Image Caption"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:536
+msgid "User Profile Metabox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:543
+#: inc/vendor/cmb2/example-functions.php:613
+msgid "Extra Info"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:551
+msgid "Avatar"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:558
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:565
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:572
+msgid "Google+ URL"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:579
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:586
+msgid "User Field"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:606
+msgid "Category Metabox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:621
+msgid "Term Image"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:628
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:650
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:665
+msgid "Site Background Color"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:701
+msgid "REST Test Box"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:710
+msgid "REST Test Text"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:711
+msgid "Will show in the REST API for this box and for pages."
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:717
+msgid "REST Editable Test Text"
+msgstr ""
+
+#: inc/vendor/cmb2/example-functions.php:718
+msgid "Will show in REST API \"editable\" contexts only (`POST` requests)."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2.php:127
+msgid "Metabox configuration is required to have an ID parameter."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2.php:470
+msgid "Click to toggle"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Ajax.php:71
+msgid "Please Try Again"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Ajax.php:173
+msgid "Remove Embed"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Ajax.php:181
+#: inc/vendor/cmb2/includes/helper-functions.php:99
+#, php-format
+msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:389
+#, php-format
+msgid ""
+"The \"%s\" field parameter has been deprecated in favor of the \"%s\" "
+"parameter."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:393
+#, php-format
+msgid ""
+"Using the \"%s\" field parameter as a callback has been deprecated in favor "
+"of the \"%s\" parameter."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:423
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s! %3$s"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:426
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s with no alternative available."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:459
+#: inc/vendor/cmb2/includes/types/CMB2_Type_Base.php:138
+#, php-format
+msgid "Invalid %1$s property: %2$s"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Base.php:473
+#: inc/vendor/cmb2/includes/types/CMB2_Type_Base.php:123
+#, php-format
+msgid "Invalid %1$s method: %2$s"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Field.php:1118
+msgid "Add Group"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Field.php:1119
+msgid "Remove Group"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Field.php:1141
+#: inc/vendor/cmb2/includes/CMB2_Field.php:1145
+msgid "None"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Field.php:1206
+msgid "Sorry, this field does not have a cmb_id specified."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Field_Display.php:409
+#: inc/vendor/cmb2/includes/CMB2_JS.php:158
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File_Base.php:75
+msgid "File:"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:99
+#: inc/vendor/cmb2/includes/CMB2_JS.php:138
+msgid "Clear"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:101
+msgid "Select Color"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:102
+msgid "Current Color"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:128
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:129
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:130
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:131
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:132
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:133
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:134
+msgid "Next"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:135
+msgid "Prev"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:136
+msgid "Today"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:137
+#: inc/vendor/cmb2/includes/CMB2_JS.php:147
+msgid "Done"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:141
+msgid "Choose Time"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:142
+msgid "Time"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:143
+msgid "Hour"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:144
+msgid "Minute"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:145
+msgid "Second"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:146
+msgid "Now"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:148
+msgctxt ""
+"Valid formatting string, as per http://trentrichardson.com/examples/"
+"timepicker/"
+msgid "hh:mm TT"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:154
+msgid "Use this file"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:155
+msgid "Use these files"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:156
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File_Base.php:61
+msgid "Remove Image"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:157
+#: inc/vendor/cmb2/includes/CMB2_Types.php:392
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File_Base.php:80
+msgid "Remove"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:159
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File_Base.php:78
+msgid "Download"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_JS.php:160
+msgid "Select / Deselect All"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Types.php:220
+msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_Types.php:329
+msgid "Add Row"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_hookup.php:148
+msgid ""
+"Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_hookup.php:152
+msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/CMB2_hookup.php:389
+#, php-format
+msgid "Toggle panel: %s"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/helper-functions.php:287
+msgid "Save"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:250
+msgid "This box does not have read permissions."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:268
+msgid "This box does not have write permissions."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:289
+msgid ""
+"No box found by that id. A box needs to be registered with the \"show_in_rest"
+"\" parameter configured."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:365
+msgid "A human-readable description of the object."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:370
+msgid "The id for the object."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:375
+msgid "The title for the object."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:50
+msgid "Includes the registered fields for the box in the response."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:72
+msgid ""
+"Includes the fully rendered attributes, 'form_open', 'form_close', as well "
+"as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
+"stylesheet handles."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:122
+msgid "No boxes found."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:27
+msgid ""
+"Includes the box object which the fields are registered to in the response."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
+msgid ""
+"When the '_rendered' argument is passed, the renderable field attributes "
+"will be returned fully rendered. By default, the names of the callback "
+"handers for the renderable attributes will be returned."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:33
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:36
+msgid ""
+"To view or modify the field's value, the 'object_id' and 'object_type' "
+"arguments are required."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:236
+msgid ""
+"CMB2 Field value cannot be updated without the value parameter specified."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:295
+msgid ""
+"CMB2 Field value cannot be modified without the object_id and object_type "
+"parameters specified."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:308
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:335
+msgid "No field found by that id."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:407
+#, php-format
+msgid "Value Error for %s"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:24
+msgid "The register_routes() method must be overriden"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:34
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:44
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:54
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:64
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:74
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:84
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:94
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:104
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:114
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:124
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:134
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:145
+#, php-format
+msgid "Method '%s' not implemented. Must be over-ridden in subclass."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:248
+msgid "Current page of the collection."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:256
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:265
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/shim/WP_REST_Controller.php:283
+msgid ""
+"Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File.php:40
+msgid "Add or Upload File"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/types/CMB2_Type_File_List.php:39
+msgid "Add or Upload Files"
+msgstr ""
+
+#: inc/vendor/cmb2/includes/types/CMB2_Type_Taxonomy_Multicheck.php:27
+#: inc/vendor/cmb2/includes/types/CMB2_Type_Taxonomy_Radio.php:25
+msgid "No terms"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://pushlabs.co/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A call button placed on your website to instantly increase conversions!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Push Labs"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://pushlabs.co"
+msgstr ""

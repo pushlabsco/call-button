@@ -2616,6 +2616,12 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
+	"\/languages\/call-button.pot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/call-button.pot",
+		"oF": 0
+		},
 	"\/pushlabs-call-button.php": {
 		"ft": 8192,
 		"oA": 2,
