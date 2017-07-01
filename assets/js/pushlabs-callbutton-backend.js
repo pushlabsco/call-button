@@ -1,4 +1,23 @@
 jQuery( document ).ready(function($) {
+  // Our settings tabs
+  $( function() {
+    $( '.pushlabs-callbutton-pane1' ).show();
+
+    $( 'a[href="#settings"]' ).click( function( e ) {
+      e.preventDefault();
+      $( '.pushlabs-callbutton-pane2' ).hide();
+      $( '.pushlabs-callbutton-pane1' ).show();
+      $( '.nav-tab-wrapper a' ).removeClass( 'nav-tab-active' );
+      $( this ).addClass( 'nav-tab-active' );
+    });
+    $( 'a[href="#styles"]' ).click( function( e ) {
+      e.preventDefault();
+      $( '.pushlabs-callbutton-pane1' ).hide();
+      $( '.pushlabs-callbutton-pane2' ).show();
+      $( '.nav-tab-wrapper a' ).removeClass( 'nav-tab-active' );
+      $( this ).addClass( 'nav-tab-active' );
+    });
+  });
 
   // Our Style settings drop down boxes
   $( function() {

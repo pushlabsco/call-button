@@ -164,6 +164,26 @@ function pushlabs_callbutton_post_types() {
 }
 
 /**
+ * Only display the metabox if the user wants it
+ *
+ * @since 0.1
+ *
+ * @param  object $cmb Current box object
+ * @return bool True if current user's ID is 1
+ */
+function pushlabs_callbutton_hide_metabox() {
+  $prefix = 'pushlabs_callbutton_';
+
+  $is_visible = pushlabs_callbutton_get_option( $prefix . 'hide_metabox' );
+
+  if ( !empty( $is_visible ) ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+/**
  * Build the call button
  *
  * @since 0.1
@@ -195,7 +215,7 @@ function pushlabs_callbutton_button() {
 
   // Declare our data
   $phone_obj = ( !empty( $phone_metabox ) ? $phone_metabox : $phone_option );
-  $style_obj = ( !empty( $style_metabox ) ? $style_metabox : $style_option );
+  $style_obj = ( $style_metabox != 'default' ? $style_metabox : $style_option );
   $button_position_obj = $button_position_option;
   $button_size_obj = $button_size_option;
   $banner_text_obj = $banner_text_option;

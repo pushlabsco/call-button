@@ -21,6 +21,7 @@ function pushlabs_callbutton_register_metabox() {
     'object_types'  => pushlabs_callbutton_post_types(),
     'context'       => 'normal',
     'priority'      => 'high',
+    'show_on_cb'    => 'pushlabs_callbutton_hide_metabox',
   ) );
 
   $callbutton_metabox->add_field( array(
@@ -42,13 +43,15 @@ function pushlabs_callbutton_register_metabox() {
     'desc' => __( 'If you would like to use a different style of Call Button for this page, you can specify it here.', 'call-button' ),
     'id'   => $prefix . 'style',
     'type' => 'radio_image',
-    'default' => 'button',
+    'default' => 'default',
     'options' => array(
-      'button' => __( 'Button', 'call-button'),
-      'banner' => __( 'Banner', 'call-button'),
+      'default' => __( 'Default', 'call-button' ),
+      'button' => __( 'Button', 'call-button' ),
+      'banner' => __( 'Banner', 'call-button' ),
     ),
     'images_path' => PUSHLABS_CALLBUTTON_PLUGIN_URL,
     'images' => array(
+      'default' => 'assets/img/radio-default.png',
       'button' => 'assets/img/radio-button-right.png',
       'banner' => 'assets/img/radio-banner.png',
     ),

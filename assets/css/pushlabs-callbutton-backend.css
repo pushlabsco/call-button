@@ -5,7 +5,9 @@
   padding: 20px;
   margin-bottom: 25px; }
 
-.pushlabs-callbutton-box-options {
+.pushlabs-callbutton-box-options,
+.pushlabs-callbutton-pane1,
+.pushlabs-callbutton-pane2 {
   display: none; }
 
 #pushlabs_callbutton_metabox .cmb-type-radio-image .cmb2-radio-list li label img,

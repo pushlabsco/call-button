@@ -110,6 +110,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/radio-default.png": {
+		"ft": 32768,
+		"iS": 29809,
+		"oA": 0,
+		"oAP": "\/assets\/img\/radio-default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/js\/pushlabs-callbutton-backend.js": {
 		"ft": 64,
 		"mi": 0,

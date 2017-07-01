@@ -6,7 +6,10 @@
   margin-bottom: 25px;
 }
 
-.pushlabs-callbutton-box-options {
+// Hide settings that will be shown through Javascript if applicable
+.pushlabs-callbutton-box-options,
+.pushlabs-callbutton-pane1,
+.pushlabs-callbutton-pane2 {
   display: none;
 }
 

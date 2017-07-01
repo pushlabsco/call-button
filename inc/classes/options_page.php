@@ -90,6 +90,10 @@ class Pushlabs_Callbutton_Options {
     ?>
     <div class="wrap cmb2-options-page <?php echo $this->key; ?>">
       <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+      <h2 class="nav-tab-wrapper wp-clearfix">
+        <a href="#settings" class="nav-tab nav-tab-active"><?php _e( 'Settings', 'call-button' ); ?></a>
+        <a href="#styles" class="nav-tab"><?php _e( 'Styles', 'call-button' ); ?></a>
+      </h2>
       <?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
     </div>
   <?php
@@ -120,6 +124,7 @@ class Pushlabs_Callbutton_Options {
       'desc' => __( 'Please enter your phone number including area code.', 'call-button' ),
       'id'   => $prefix . 'phone',
       'type' => 'pushlabs_callbutton_number',
+      'before_row' => '<div class="wrap pushlabs-callbutton-pane1">',
     ) );
 
     $cmb->add_field( array(
@@ -130,20 +135,29 @@ class Pushlabs_Callbutton_Options {
     ) );
 
     $cmb->add_field( array(
+      'name' => __( 'Hide the Metabox on Posts and Pages?', 'call-button' ),
+      'desc' => __( 'If you don\'t need the metabox for Call Button, you can hide it here.', 'call-button' ),
+      'id'   => $prefix . 'hide_metabox',
+      'type' => 'checkbox',
+      'after_row' => '</div>',
+    ) );
+
+    $cmb->add_field( array(
       'name' => __( 'Style', 'call-button' ),
       'desc' => __( 'Please select your style.', 'call-button' ),
       'id'   => $prefix . 'style',
-      'type'             => 'radio_image',
+      'type' => 'radio_image',
       'default' => 'button',
-      'options'          => array(
-        'button'    => __( 'Button', 'call-button'),
-        'banner'  => __( 'Banner', 'call-button'),
+      'options' => array(
+        'button' => __( 'Button', 'call-button'),
+        'banner' => __( 'Banner', 'call-button'),
       ),
-      'images_path'      => PUSHLABS_CALLBUTTON_PLUGIN_URL,
-      'images'           => array(
-        'button'    => 'assets/img/radio-blank.png',
-        'banner'  => 'assets/img/radio-banner.png',
+      'images_path' => PUSHLABS_CALLBUTTON_PLUGIN_URL,
+      'images' => array(
+        'button' => 'assets/img/radio-blank.png',
+        'banner' => 'assets/img/radio-banner.png',
       ),
+      'before_row' => '<div class="wrap pushlabs-callbutton-pane2">',
     ) );
 
     $cmb->add_field( array(
@@ -243,7 +257,7 @@ class Pushlabs_Callbutton_Options {
       'desc' => __( 'This includes the icon and text color if applicable', 'call-button' ),
       'id'   => $prefix . 'style_banner_color',
       'type' => 'colorpicker',
-      'after_row' => '</div></div>',
+      'after_row' => '</div></div></div>',
     ) );
 
 
