@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: pushlabs
-Tags: call button, call now, call now button, metabox, mobile, directory, sales, phone, contact, contact now
+Tags: call button, call now, call, button, metabox, mobile, directory, sales, phone, contact, contact now
 Requires at least: 3.8.0
 Tested up to: 4.8
 Stable tag: 1.0
@@ -76,9 +76,22 @@ function themeprefix_callbutton_icon_class( $icon_class ) {
 }
 add_filter( 'pushlabs_callbutton_icon_class', 'themeprefix_callbutton_icon_class' );'
 
+== How do I add my phone number? ==
+
+To add your phone number, go to the Settings > Call Button page and enter your number. Enter only the numbers, special characters are not allowed.
+
 == Screenshots ==
 
-1. Test
+1. Call Button Settings Page
+2. Call Button Button Styles
+3. Call Button Banner Styles
+4. Call Button Color Picker
+5. Call Button Add Your Own Text
+6. Call Button Post/Page Metabox Settings
+7. Call Button Example 1
+8. Call Button Example 2
+9. Call Button Example 3
+10. Call Button Example 4
 
 == Changelog ==
 

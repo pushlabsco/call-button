@@ -79,6 +79,8 @@ add_action( 'admin_enqueue_scripts', 'pushlabs_callbutton_enqueue_admin_scripts'
  */
 function pushlabs_callbutton_enqueue_scripts() {
   wp_enqueue_style( 'pushlabs-callbutton', PUSHLABS_CALLBUTTON_PLUGIN_URL . 'assets/css/pushlabs-callbutton.css', array(), PUSHLABS_CALLBUTTON_PLUGIN_VERSION );
+
+
   wp_enqueue_style( 'pushlabs-callbutton-fontawesome', PUSHLABS_CALLBUTTON_PLUGIN_URL . 'inc/vendor/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 }
 add_action( 'wp_enqueue_scripts', 'pushlabs_callbutton_enqueue_scripts' );
@@ -178,6 +180,20 @@ function pushlabs_callbutton_post_types() {
 
   return $post_types;
 }
+
+/**
+ * Dequeue Font Awesome Filter
+ *
+ * @since 1.0
+ */
+function pushlabs_callbutton_dequeue_fontawesome() {
+  $dequeue = false;
+  $dequeue = apply_filters( 'pushlabs_callbutton_dequeue_fontawesome', $dequeue );
+
+
+  return $dequeue;
+}
+
 
 /**
  * Only display the metabox if the user wants it
