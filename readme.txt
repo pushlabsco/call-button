@@ -80,6 +80,22 @@ add_filter( 'pushlabs_callbutton_icon_class', 'themeprefix_callbutton_icon_class
 
 To add your phone number, go to the Settings > Call Button page and enter your number. Enter only the numbers, special characters are not allowed.
 
+== I already have Font Awesome Installed! Can I dequeue the reference Call Button uses? ==
+
+Sure thing! If you already have Font Awesome installed and don't want to use Call Button's, you can use this filter to dequeue it.
+'/**
+ * Push Labs Call Button Dequeue Font Awesome
+ *
+ * @author Push Labs
+ */
+function themeprefix_callbutton_dequeue_fontawesome( $dequeue ) {
+  // True or false
+  $dequeue = true;
+
+  return $dequeue;
+}
+add_filter( 'pushlabs_callbutton_dequeue_fontawesome', 'themeprefix_callbutton_dequeue_fontawesome' );'
+
 == Screenshots ==
 
 1. Call Button Settings Page
