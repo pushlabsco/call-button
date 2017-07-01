@@ -2633,6 +2633,12 @@
 		"oA": 2,
 		"oAP": "\/pushlabs-callbutton.php",
 		"oF": 0
+		},
+	"\/readme.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/readme.txt",
+		"oF": 0
 		}
 	},
 "hooks": [
