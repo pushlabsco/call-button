@@ -58,7 +58,7 @@
     &.pushlabs-callbutton-position--middle {
       bottom: .75rem;
       left: 50%;
-      transform: scale(0.75) translateX(-50%);
+      transform: translateX(-50%) scale(0.75);
     }
   }
 
@@ -97,7 +97,7 @@
     &.pushlabs-callbutton-position--middle {
       bottom: 2rem;
       left: 50%;
-      transform: scale(1.5) translateX(-50%);
+      transform: translateX(-50%) scale(1.5);
     }
   }
 
