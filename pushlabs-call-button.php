@@ -91,6 +91,7 @@ function pushlabs_callbutton_inline_css() {
   $style_banner_prefix = $prefix . 'style_banner_';
 
   // Get our data
+  $mobile_breakpoint = pushlabs_callbutton_get_option( $prefix . 'breakpoint' );
   $style_button_bg_color = pushlabs_callbutton_get_option( $style_button_prefix . 'bg_color' );
   $style_button_color = pushlabs_callbutton_get_option( $style_button_prefix . 'color' );
   $style_button_shadow = pushlabs_callbutton_get_option( $style_button_prefix . 'shadow' );
@@ -103,6 +104,10 @@ function pushlabs_callbutton_inline_css() {
 
   // Create our variable
   $css = '';
+
+  if ( !empty( $mobile_breakpoint ) ) {
+    $css .= '@media (min-width: ' . $mobile_breakpoint . 'px) { .pushlabs-callbutton { display: none !important; } }';
+  }
 
   if ( !empty( $style_button_bg_color ) ) {
     $css .= '.pushlabs-callbutton.pushlabs-callbutton-style--button .pushlabs-callbutton-background {color: ' . $style_button_bg_color . '}';
@@ -148,6 +153,7 @@ function pushlabs_callbutton_button() {
   $phone_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_phone' );
   $style_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style' );
   $button_position_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_position' );
+  $button_size_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_button_size' );
   $banner_text_meta = pushlabs_callbutton_get_option( 'pushlabs_callbutton_style_banner_text' );
 
   // Establish some variables
@@ -160,6 +166,12 @@ function pushlabs_callbutton_button() {
     $position = $class . 'position--' . $button_position_meta;
   } else {
     $position = '';
+  }
+
+  if ( $style_meta === 'button' ) {
+    $size = $class . 'size--' . $button_size_meta;
+  } else {
+    $size = '';
   }
 
   // Filter to change the icon class
@@ -190,7 +202,7 @@ function pushlabs_callbutton_button() {
   }
 
   // Create the button
-  $button = '<a href="tel:' . $phone_meta . '" class="pushlabs-callbutton ' . $style . ' ' . $position . '">';
+  $button = '<a href="tel:' . $phone_meta . '" class="pushlabs-callbutton ' . $style . ' ' . $size . ' ' . $position . '">';
   $button .= '<span class="pushlabs-callbutton-container">';
   $button .= $icon;
   $button .= $text;
@@ -208,20 +220,20 @@ add_action( 'wp_footer', 'pushlabs_callbutton_button' );
  *
  * @since 0.1
  */
-function cmb2_render_callback_for_pushlabs_callbutton_phone( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+function cmb2_render_callback_for_pushlabs_callbutton_number( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
   // Choose our input type
-  echo $field_type_object->input( array( 'type' => 'number' ) );
+  echo $field_type_object->input( array( 'type' => 'number', 'class' => 'medium-text' ) );
 }
-add_action( 'cmb2_render_pushlabs_callbutton_phone', 'cmb2_render_callback_for_pushlabs_callbutton_phone', 10, 5 );
+add_action( 'cmb2_render_pushlabs_callbutton_number', 'cmb2_render_callback_for_pushlabs_callbutton_number', 10, 5 );
 
 /**
  * Sanitize our custom phone field for CMB2
  *
  * @since 0.1
  */
-function cmb2_sanitize_pushlabs_callbutton_phone_callback( $null, $new ) {
+function cmb2_sanitize_pushlabs_callbutton_number_callback( $null, $new ) {
   // Sanitize the input
   $new = preg_replace( "/[^0-9]/", "", $new );
   return $new;
 }
-add_filter( 'cmb2_sanitize_pushlabs_callbutton_phone', 'cmb2_sanitize_pushlabs_callbutton_phone_callback', 10, 2 );
+add_filter( 'cmb2_sanitize_pushlabs_callbutton_number', 'cmb2_sanitize_pushlabs_callbutton_number_callback', 10, 2 );

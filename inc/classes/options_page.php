@@ -115,12 +115,18 @@ class Pushlabs_Callbutton_Options {
     $prefix = 'pushlabs_callbutton_';
 
     // Set our CMB2 fields
-    // @TODO Add "numbers" type
     $cmb->add_field( array(
       'name' => __( 'Phone Number', 'call-button' ),
       'desc' => __( 'Please enter your phone number including area code.', 'call-button' ),
       'id'   => $prefix . 'phone',
-      'type' => 'pushlabs_callbutton_phone',
+      'type' => 'pushlabs_callbutton_number',
+    ) );
+
+    $cmb->add_field( array(
+      'name' => __( 'Mobile Breakpoint', 'call-button' ),
+      'desc' => __( 'If you would like to customize the breakpoint for which the button/banner appear, you can specify a pixel here. (Defualt: 768px)', 'call-button' ),
+      'id'   => $prefix . 'breakpoint',
+      'type' => 'pushlabs_callbutton_number',
     ) );
 
     $cmb->add_field( array(
@@ -144,7 +150,7 @@ class Pushlabs_Callbutton_Options {
       'name' => __( 'Button Position', 'call-button' ),
       'desc' => __( 'The position your button will be in.', 'call-button' ),
       'id'   => $prefix . 'style_button_position',
-      'type' => 'radio',
+      'type' => 'radio_inline',
       'options'          => array(
         'left' => __( 'Left', 'call-button' ),
         'middle'   => __( 'Middle', 'call-button' ),
@@ -152,6 +158,19 @@ class Pushlabs_Callbutton_Options {
       ),
       'default' => 'right',
       'before_row' => '<div class="pushlabs-callbutton-style-box box-style--button"><h2>' . __( 'Button Style', 'call-button' ) . '</h2><div class="pushlabs-callbutton-box-options">',
+    ) );
+
+    $cmb->add_field( array(
+      'name' => __( 'Button Size', 'call-button' ),
+      'desc' => __( 'The size of your button.', 'call-button' ),
+      'id'   => $prefix . 'style_button_size',
+      'type' => 'radio_inline',
+      'options'          => array(
+        'small' => __( 'Small', 'call-button' ),
+        'medium'   => __( 'Medium', 'call-button' ),
+        'large'     => __( 'Large', 'call-button' ),
+      ),
+      'default' => 'medium',
     ) );
 
     $cmb->add_field( array(
@@ -216,7 +235,7 @@ class Pushlabs_Callbutton_Options {
       'name' => __( 'Banner Font Size', 'call-button' ),
       'desc' => __( 'Font size for the text. (In px)', 'call-button' ),
       'id'   => $prefix . 'style_banner_font_size',
-      'type' => 'text',
+      'type' => 'pushlabs_callbutton_number',
     ) );
 
     $cmb->add_field( array(

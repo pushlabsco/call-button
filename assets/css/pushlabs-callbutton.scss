@@ -3,6 +3,10 @@
   display: block;
   z-index: 9999;
 
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+
   &.pushlabs-callbutton-style--button {
     color: #fff;
 
@@ -42,20 +46,63 @@
     }
   }
 
-  &.pushlabs-callbutton-position--right {
-    bottom: 1.5rem;
-    right: 1.5rem;
+  &.pushlabs-callbutton-size--small {
+    transform: scale(0.75);
+
+    &.pushlabs-callbutton-position--right {
+      bottom: .75rem;
+      right: .75rem;
+    }
+
+    &.pushlabs-callbutton-position--left {
+      bottom: .75rem;
+      left: .75rem;
+    }
+
+    &.pushlabs-callbutton-position--middle {
+      bottom: .75rem;
+      left: 50%;
+      transform: scale(0.75) translateX(-50%);
+    }
   }
 
-  &.pushlabs-callbutton-position--left {
-    bottom: 1.5rem;
-    left: 1.5rem;
+
+  &.pushlabs-callbutton-size--medium {
+    &.pushlabs-callbutton-position--right {
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    &.pushlabs-callbutton-position--left {
+      bottom: 1.5rem;
+      left: 1.5rem;
+    }
+
+    &.pushlabs-callbutton-position--middle {
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
-  &.pushlabs-callbutton-position--middle {
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+  &.pushlabs-callbutton-size--large {
+    transform: scale(1.5);
+
+    &.pushlabs-callbutton-position--right {
+      bottom: 2rem;
+      right: 2rem;
+    }
+
+    &.pushlabs-callbutton-position--left {
+      bottom: 2rem;
+      left: 2rem;
+    }
+
+    &.pushlabs-callbutton-position--middle {
+      bottom: 2rem;
+      left: 50%;
+      transform: scale(1.5) translateX(-50%);
+    }
   }
 
 }

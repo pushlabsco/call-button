@@ -4,6 +4,12 @@
   z-index: 9999;
 }
 
+@media (min-width: 768px) {
+  .pushlabs-callbutton {
+    display: none !important;
+  }
+}
+
 .pushlabs-callbutton.pushlabs-callbutton-style--button {
   color: #fff;
 }
@@ -39,18 +45,58 @@
   margin-right: 7px;
 }
 
-.pushlabs-callbutton.pushlabs-callbutton-position--right {
+.pushlabs-callbutton.pushlabs-callbutton-size--small {
+  transform: scale(0.75);
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--small.pushlabs-callbutton-position--right {
+  bottom: .75rem;
+  right: .75rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--small.pushlabs-callbutton-position--left {
+  bottom: .75rem;
+  left: .75rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--small.pushlabs-callbutton-position--middle {
+  bottom: .75rem;
+  left: 50%;
+  transform: scale(0.75) translateX(-50%);
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--medium.pushlabs-callbutton-position--right {
   bottom: 1.5rem;
   right: 1.5rem;
 }
 
-.pushlabs-callbutton.pushlabs-callbutton-position--left {
+.pushlabs-callbutton.pushlabs-callbutton-size--medium.pushlabs-callbutton-position--left {
   bottom: 1.5rem;
   left: 1.5rem;
 }
 
-.pushlabs-callbutton.pushlabs-callbutton-position--middle {
+.pushlabs-callbutton.pushlabs-callbutton-size--medium.pushlabs-callbutton-position--middle {
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--large {
+  transform: scale(1.5);
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--large.pushlabs-callbutton-position--right {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--large.pushlabs-callbutton-position--left {
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.pushlabs-callbutton.pushlabs-callbutton-size--large.pushlabs-callbutton-position--middle {
+  bottom: 2rem;
+  left: 50%;
+  transform: scale(1.5) translateX(-50%);
 }
