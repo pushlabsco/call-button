@@ -2616,10 +2616,10 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/languages\/call-button.pot": {
+	"\/languages\/pushlabs-callbutton.pot": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/call-button.pot",
+		"oAP": "\/languages\/pushlabs-callbutton.pot",
 		"oF": 0
 		},
 	"\/pushlabs-callbutton.php": {
