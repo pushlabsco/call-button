@@ -3,7 +3,7 @@
 Plugin Name: Call Button
 Plugin URI: https://pushlabs.co/
 Description: A call button placed on your website to instantly increase conversions!
-Version: 0.1
+Version: 1.0
 Author: Push Labs
 Author URI: https://pushlabs.co
 Text Domain: call-button
@@ -19,7 +19,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'PUSHLABS_CALLBUTTON_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'PUSHLABS_CALLBUTTON_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'PUSHLABS_CALLBUTTON_PLUGIN_BASE', plugin_basename(__FILE__) );
-define( 'PUSHLABS_CALLBUTTON_PLUGIN_VERSION', '0.1' );
+define( 'PUSHLABS_CALLBUTTON_PLUGIN_VERSION', '1.0' );
 
 // Include necessary classes and frameworks
 if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2/init.php' ) ) {
@@ -38,7 +38,7 @@ if( file_exists( PUSHLABS_CALLBUTTON_PLUGIN_PATH . 'inc/vendor/cmb2-radio-image/
 /**
  * Load the plugin text domain for localization
  *
- * @since 0.1
+ * @since 1.0
  * @link https://codex.wordpress.org/I18n_for_WordPress_Developers
  *
  * @uses load_plugin_textdomain()
@@ -55,7 +55,7 @@ add_action( 'plugins_loaded', 'pushlabs_callbutton_load_textdomain' );
 /**
  * Enqueue admin scripts and styles in the backend
  *
- * @since 0.1
+ * @since 1.0
  *
  * @uses wp_enqueue_style()
  * @uses wp_enqueue_script()
@@ -72,7 +72,7 @@ add_action( 'admin_enqueue_scripts', 'pushlabs_callbutton_enqueue_admin_scripts'
 /**
  * Enqueue Call Button scripts and styles for the frontend
  *
- * @since 0.1
+ * @since 1.0
  *
  * @uses wp_enqueue_script()
  * @uses wp_enqueue_style()
@@ -86,7 +86,7 @@ add_action( 'wp_enqueue_scripts', 'pushlabs_callbutton_enqueue_scripts' );
 /**
  * Enqueue our inline CSS styles created from the settings page.
  *
- * @since 0.1
+ * @since 1.0
  */
 function pushlabs_callbutton_inline_css() {
   $prefix = 'pushlabs_callbutton_';
@@ -152,7 +152,7 @@ add_action( 'wp_enqueue_scripts', 'pushlabs_callbutton_inline_css' );
 /**
  * The post types that our metabox will be shown on.
  *
- * @since 0.1
+ * @since 1.0
  * @uses apply_filters()
  * @return array Array of post types Call Button uses
  */
@@ -166,7 +166,7 @@ function pushlabs_callbutton_post_types() {
 /**
  * Only display the metabox if the user wants it
  *
- * @since 0.1
+ * @since 1.0
  *
  * @param  object $cmb Current box object
  * @return bool True if current user's ID is 1
@@ -186,7 +186,7 @@ function pushlabs_callbutton_hide_metabox() {
 /**
  * Build the call button
  *
- * @since 0.1
+ * @since 1.0
  */
 function pushlabs_callbutton_button() {
   // Establish some variables
@@ -286,7 +286,7 @@ add_action( 'wp_footer', 'pushlabs_callbutton_button' );
 /**
  * Create our custom Phone field for CMB2
  *
- * @since 0.1
+ * @since 1.0
  */
 function cmb2_render_callback_for_pushlabs_callbutton_number( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
   // Choose our input type
@@ -297,7 +297,7 @@ add_action( 'cmb2_render_pushlabs_callbutton_number', 'cmb2_render_callback_for_
 /**
  * Sanitize our custom phone field for CMB2
  *
- * @since 0.1
+ * @since 1.0
  */
 function cmb2_sanitize_pushlabs_callbutton_number_callback( $null, $new ) {
   // Sanitize the input

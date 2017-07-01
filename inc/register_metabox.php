@@ -7,7 +7,7 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Register Call Button metabox and fields
  *
- * @since 0.1
+ * @since 1.0
  *
  * @uses new_cmb2_box()
  * @uses add_field()

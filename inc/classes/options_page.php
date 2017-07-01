@@ -8,7 +8,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Call Button Options Page
- * @version 0.1
+ * @version 1.0
  */
 class Pushlabs_Callbutton_Options {
   /**
@@ -51,7 +51,7 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Constructor
-   * @since 0.1
+   * @since 1.0
    */
   protected function __construct() {
     // Set our title
@@ -59,7 +59,7 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Initiate our hooks
-   * @since 0.1
+   * @since 1.0
    */
   public function hooks() {
     add_action( 'admin_init', array( $this, 'init' ) );
@@ -68,14 +68,14 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Register our setting to WP
-   * @since  0.1
+   * @since  1.0
    */
   public function init() {
     register_setting( $this->key, $this->key );
   }
   /**
    * Add menu options page
-   * @since 0.1
+   * @since 1.0
    */
   public function add_options_page() {
     $this->options_page = add_options_page( $this->title, $this->title, 'manage_options', $this->key, array( $this, 'admin_page_display' ) );
@@ -84,7 +84,7 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Admin page markup. Mostly handled by CMB2
-   * @since  0.1
+   * @since  1.0
    */
   public function admin_page_display() {
     ?>
@@ -100,7 +100,7 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Add the options metabox to the array of metaboxes
-   * @since  0.1
+   * @since  1.0
    */
   function add_options_page_metabox() {
     // hook in our save notices
@@ -265,7 +265,7 @@ class Pushlabs_Callbutton_Options {
   /**
    * Register settings notices for display
    *
-   * @since  0.1
+   * @since  1.0
    * @param  int   $object_id Option key
    * @param  array $updated   Array of updated fields
    * @return void
@@ -279,7 +279,7 @@ class Pushlabs_Callbutton_Options {
   }
   /**
    * Public getter method for retrieving protected/private variables
-   * @since  0.1
+   * @since  1.0
    * @param  string  $field Field to retrieve
    * @return mixed          Field value or exception is thrown
    */
@@ -293,7 +293,7 @@ class Pushlabs_Callbutton_Options {
 }
 /**
  * Helper function to get/return the Myprefix_Admin object
- * @since  0.1
+ * @since  1.0
  * @return Myprefix_Admin object
  */
 function pushlabs_callbutton_options_instance() {
