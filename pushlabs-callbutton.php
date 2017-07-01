@@ -210,17 +210,26 @@ function pushlabs_callbutton_button() {
   $class = 'pushlabs-callbutton-';
   $metabox_prefix = 'pushlabs_callbutton_metabox_field_';
 
-  // Identify if we are on a page or the home page and grab the ID conditionally
-  if( is_page() || is_single() ) {
-    $the_id = get_the_ID();
-  } elseif( is_home() && get_option( 'show_on_front' ) == 'page' ) {
-    $the_id = get_option( 'page_for_posts' );
-  }
 
-  // Our metabox data
-  $phone_metabox = get_post_meta( $the_id, $metabox_prefix . 'phone', true );
-  $disable_metabox = get_post_meta( $the_id, $metabox_prefix . 'disable', true );
-  $style_metabox = get_post_meta( $the_id, $metabox_prefix . 'style', true );
+  // If we are on a page or post and there is metabox data, use it.
+  $is_metabox_visible = pushlabs_callbutton_get_option( 'pushlabs_callbutton_hide_metabox' );
+  $phone_metabox = $disable_metabox = '';
+  $style_metabox = 'default';
+  if ( empty( $is_metabox_visible ) ) {
+    if( is_page() || is_single() || is_home() && get_option( 'show_on_front') == 'page' ) {
+      // Identify if we are on a page or the home page and grab the ID conditionally
+      if( is_page() || is_single() ) {
+        $the_id = get_the_ID();
+      } elseif( is_home() && get_option( 'show_on_front' ) == 'page' ) {
+        $the_id = get_option( 'page_for_posts' );
+      }
+
+      // Our metabox data
+      $phone_metabox = get_post_meta( $the_id, $metabox_prefix . 'phone', true );
+      $disable_metabox = get_post_meta( $the_id, $metabox_prefix . 'disable', true );
+      $style_metabox = get_post_meta( $the_id, $metabox_prefix . 'style', true );
+    }
+  }
 
   // Our settings data
   $phone_option = pushlabs_callbutton_get_option( 'pushlabs_callbutton_phone' );
