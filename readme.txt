@@ -48,7 +48,8 @@ Installation is simple.
 = Is there any way to add the metabox to custom post types? =
 
 You sure can with a simple filter!
-'/**
+`
+/**
  * Push Labs Call Button Post types
  *
  * @author Push Labs
@@ -58,12 +59,14 @@ function themeprefix_callbutton_post_types( $post_types ) {
 
   return $post_types;
 }
-add_filter( 'pushlabs_callbutton_post_types', 'themeprefix_callbutton_post_types' );'
+add_filter( 'pushlabs_callbutton_post_types', 'themeprefix_callbutton_post_types' );
+`
 
-== Can I change the Icon? ==
+= Can I change the Icon? =
 
 Of course! This is done through a filter at the moment. Please see the code below:
-'/**
+`
+/**
  * Push Labs Call Button Icon Class
  *
  * @author Push Labs
@@ -74,16 +77,18 @@ function themeprefix_callbutton_icon_class( $icon_class ) {
 
   return $icon_class;
 }
-add_filter( 'pushlabs_callbutton_icon_class', 'themeprefix_callbutton_icon_class' );'
+add_filter( 'pushlabs_callbutton_icon_class', 'themeprefix_callbutton_icon_class' );
+`
 
-== How do I add my phone number? ==
+= How do I add my phone number? =
 
 To add your phone number, go to the Settings > Call Button page and enter your number. Enter only the numbers, special characters are not allowed.
 
-== I already have Font Awesome Installed! Can I dequeue the reference Call Button uses? ==
+= I already have Font Awesome Installed! Can I dequeue the reference Call Button uses? =
 
 Sure thing! If you already have Font Awesome installed and don't want to use Call Button's, you can use this filter to dequeue it.
-'/**
+`
+/**
  * Push Labs Call Button Dequeue Font Awesome
  *
  * @author Push Labs
@@ -94,7 +99,8 @@ function themeprefix_callbutton_dequeue_fontawesome( $dequeue ) {
 
   return $dequeue;
 }
-add_filter( 'pushlabs_callbutton_dequeue_fontawesome', 'themeprefix_callbutton_dequeue_fontawesome' );'
+add_filter( 'pushlabs_callbutton_dequeue_fontawesome', 'themeprefix_callbutton_dequeue_fontawesome' );
+`
 
 == Screenshots ==
 
